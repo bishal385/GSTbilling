@@ -62,11 +62,6 @@
                     <td th:text="${product.product_name}">Name</td>
                     <td th:text="${product.product_price}">Price</td>
                     <td th:text="${product.product_gst}">GST %</td>
-                    <td>
-                        <a th:href="@{'/edit/' + ${product.product_code}}">Edit</a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a th:href="@{'/delete/' + ${product.product_code}}">Delete</a>
-                    </td>
                 </tr>
             </tbody>
         </table>
@@ -102,7 +97,7 @@
                 }
                 if (target) {
                     var cells = target.getElementsByTagName("td");
-                    for (var i = 0; i < cells.length - 1; i++) {
+                    for (var i = 0; i < cells.length; i++) {
                         data.push(cells[i].innerHTML);
                     }
                 }
